@@ -1,7 +1,7 @@
 # ![cell-tools_logo](docs/imgs/cell-tools.logo1.svg)
 
-[![PyPI pyversions](https://img.shields.io/pypi/pyversions/perturb-tools.svg)](https://pypi.python.org/pypi/perturb-tools/)
-[![PyPI version](https://badge.fury.io/py/perturb-tools.svg)](https://badge.fury.io/py/perturb-tools)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/cell-tools.svg)](https://pypi.python.org/pypi/cell-tools/)
+[![PyPI version](https://badge.fury.io/py/cell-tools.svg)](https://badge.fury.io/py/cell-tools)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 **cell-tools** is a **Single-Cell Data Analysis Toolkit** with the following areas of focus and development:
