@@ -1,4 +1,4 @@
-# [docs/imgs/cell-tools.logo1.svg]
+# ![cell-tools_logo](docs/imgs/cell-tools.logo1.svg)
 
 Single-Cell Data Analysis Toolkit
 
