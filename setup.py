@@ -16,6 +16,12 @@ setup(
     description="cell_tools - Analysis Tools for Single-Cell Data",
     packages=[
         "cell_tools",
+        "cell_tools._ATAC",
+        "cell_tools._RNA",
+        "cell_tools._datasets",
+        "cell_tools._multiome",
+        "cell_tools._readwrite",
+        "cell_tools._utilities",
     ],
     install_requires=[
         "matplotlib>=3.4",
