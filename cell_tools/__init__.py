@@ -1,5 +1,5 @@
 
-# main __init__.py
+# cell_tools __init__.py
 
 __module_name__ = "__init__.py"
 __author__ = ", ".join(["Michael E. Vinyard"])
