@@ -7,11 +7,11 @@ __email__ = ", ".join(["vinyard@g.harvard.edu",])
 # local imports #
 # ------------- #
 
-from ._supporting_functions._load_data import _load_data
-from ._supporting_functions._get_peak_superset import _get_peak_superset
-from ._supporting_functions._unify_peak_matrices import _unify_peak_matrices
-from ._supporting_functions._write_DataDict_mtx_to_h5 import _write_DataDict_mtx_to_h5
-from ._supporting_functions._calculate_master_merged_peaks import _calculate_master_merged_peaks
+from ._supporting_funcs._load_data import _load_data
+from ._supporting_funcs._get_peak_superset import _get_peak_superset
+from ._supporting_funcs._unify_peak_matrices import _unify_peak_matrices
+from ._supporting_funcs._write_DataDict_mtx_to_h5 import _write_DataDict_mtx_to_h5
+from ._supporting_funcs._calculate_master_merged_peaks import _calculate_master_merged_peaks
 
 
 class _PeakSet:
