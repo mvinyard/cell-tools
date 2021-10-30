@@ -1,12 +1,13 @@
 # ![cell-tools_logo](docs/imgs/cell-tools.logo1.svg)
 
-Single-Cell Data Analysis Toolkit
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/perturb-tools.svg)](https://pypi.python.org/pypi/perturb-tools/)
+[![PyPI version](https://badge.fury.io/py/perturb-tools.svg)](https://badge.fury.io/py/perturb-tools)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-* **Transcriptomics (scRNA-seq)**
-  * Batch integration (using Harmony)
-  
-* **Epigenomics (scATAC-seq)**
+**cell-tools** is a **Single-Cell Data Analysis Toolkit** with the following areas of focus and development:
 
-    * Peak merging
-    
-* **Multiomics (scRNA-seq + scATAC-seq)**
+1. scRNA-seq data
+2. scATAC-seq data
+3. Multiomic (mostly scRNA-seq + scATAC-seq) data
+
+Funtion development will likely focus on scATAC-seq given that there are so many python-implemented tools developed already for scRNA-seq. However, wrappers that enable batch-mode QC and pipeline-oriented solutions have been designed and will eventually be added.
