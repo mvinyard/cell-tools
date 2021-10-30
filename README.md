@@ -11,3 +11,18 @@
 3. Multiomic (mostly scRNA-seq + scATAC-seq) data
 
 Funtion development will likely focus on scATAC-seq given that there are so many python-implemented tools developed already for scRNA-seq. However, wrappers that enable batch-mode QC and pipeline-oriented solutions have been designed and will eventually be added.
+
+### Installation
+**Install with `pip`**:
+```BASH
+pip install perturb_tools
+```
+
+**Install the development package**:
+```BASH
+# (1) clone this repository
+git clone https://github.com/mvinyard/perturb-tools.git
+
+# (2) install the local project in editable mode
+cd ./perturb-tools; pip install -e .
+```
