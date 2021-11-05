@@ -7,3 +7,4 @@ __email__ = ", ".join(["vinyard@g.harvard.edu",])
 
 
 from ._funcs._merge_reduce_peakset._merge_reduce_peakset_module import _PeakSet as PeakSet
+from ._funcs._annotate_peaks import _annotate_peaks as annotate_peaks

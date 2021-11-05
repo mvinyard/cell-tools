@@ -19,10 +19,13 @@ def _get_sample_name_between(pathlist, super_dir, minor_dir):
     return SamplePaths
 
 
-def _load_data(group_path, super_dir, minor_dir_10x="outs"):
+def _load_data(group_path, super_dir, minor_dir_10x="outs", name=""):
 
-    peak_file_paths = glob.glob(group_path + "*.bed")
-    matr_file_paths = glob.glob(group_path + "*.mtx")
+    peak_file_paths = glob.glob(group_path + name +"*.bed")
+    print("loading: {}".format(peak_file_paths))
+    matr_file_paths = glob.glob(group_path + name + "*.mtx")
+    print("loading: {}".format(matr_file_paths))
+    
 
     SamplePaths_peaks = _get_sample_name_between(
         peak_file_paths, super_dir=super_dir, minor_dir=minor_dir_10x

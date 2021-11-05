@@ -23,7 +23,7 @@ class _PeakSet:
         
         self.out = out
     
-    def load_10x(self, group_path, super_dir, minor_dir_10x="outs"):
+    def load_10x(self, group_path, super_dir, minor_dir_10x="outs", name=""):
         
         """
         Load samples from 10x outs.
@@ -51,7 +51,10 @@ class _PeakSet:
         ------
         """
             
-        self.DataDict = _load_data(group_path=group_path, super_dir=super_dir, minor_dir_10x=minor_dir_10x)
+        self.DataDict = _load_data(group_path=group_path, 
+                                   super_dir=super_dir, 
+                                   minor_dir_10x=minor_dir_10x, 
+                                   name=name)
         
         
     def aggregate_peaks(self):
