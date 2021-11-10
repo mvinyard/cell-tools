@@ -116,6 +116,8 @@ def _make_peak_labels_unique(adata,
             new_labels.append(label)
     adata.var[key_added] = new_labels
     adata.var_names = adata.var[key_added]
+    adata.var_names_make_unique()
+    adata.var = adata.var.drop(key_added, axis=1)
     
     if return_adata:
         return adata
