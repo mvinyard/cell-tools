@@ -1,11 +1,11 @@
 
-import anndata as a
+from anndata import read_h5ad
 
 def _read_h5ad(h5ad_path, silent=False):
     
     """Wraps anndata.read_h5ad"""
     
-    adata = a.read_h5ad(h5ad_path)
+    adata = read_h5ad(h5ad_path)
     
     if not silent:
         print(adata)
