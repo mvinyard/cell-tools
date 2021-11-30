@@ -1,8 +1,10 @@
 
 # _FeatureBarcodeMatrixModule.py
+
 __module_name__ = "_FeatureBarcodeMatrixModule.py"
 __author__ = ", ".join(["Michael E. Vinyard"])
 __email__ = ", ".join(["vinyard@g.harvard.edu",])
+
 
 # package imports #
 # --------------- #
@@ -10,6 +12,7 @@ import anndata as a
 import pandas as pd
 import scipy.io
 import os
+
 
 def _strip_file_extension(filepath):
     return ".".join(filepath.split(".")[:-1])

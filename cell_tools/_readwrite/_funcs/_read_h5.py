@@ -1,6 +1,17 @@
-from scipy import sparse
+
+# _read_h5.py
+
+__module_name__ = "_read_h5.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
+# package imports #
+# --------------- #
 from anndata import AnnData
 import h5py
+from scipy import sparse
+
 
 def _check_hdf5_file_keys(key_list):
     

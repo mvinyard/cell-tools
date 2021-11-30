@@ -1,13 +1,14 @@
 
 # _DataManagerModule.py
+
 __module_name__ = "_DataManagerModule.py"
 __author__ = ", ".join(["Michael E. Vinyard"])
 __email__ = ", ".join(["vinyard@g.harvard.edu",])
 
+
 # package imports #
 # --------------- #
 import pandas as pd
-import vintools as v
 from tqdm.notebook import tqdm
 
 

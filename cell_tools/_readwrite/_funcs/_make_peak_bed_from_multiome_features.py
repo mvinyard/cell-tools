@@ -1,10 +1,18 @@
 
+
+# _make_peak_bed_from_multiome_features.py
+
+__module_name__ = "_make_peak_bed_from_multiome_features.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
 # package imports #
 # --------------- #
-from scipy import sparse
-import scipy.io as io
-import pandas as pd
 import os
+import pandas as pd
+import scipy.io as io
+from scipy import sparse
 
 
 def _make_peak_bed_from_multiome_features(multiome_dir, return_data=False):
