@@ -1,7 +1,21 @@
 
+# _unify_peak_matrices.py
+
+__module_name__ = "_unify_peak_matrices.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
+# package imports #
+# --------------- #
 import pandas as pd
 import numpy as np
+
+
+# local imports #
+# ------------- #
 from ._calculate_master_merged_peaks import _calculate_master_merged_peaks
+
 
 def _define_merged_peakset_each_dataset(DataDict, ClusteredRanges_df):
 

@@ -1,5 +1,15 @@
 
+# _annotate_peaks.py
+
+__module_name__ = "_annotate_peaks.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
+# package imports #
+# --------------- #
 import episcanpy as epi
+
 
 def _make_episcanpy_compatible_peaks_labels(
     adata,

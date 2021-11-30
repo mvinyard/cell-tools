@@ -1,5 +1,6 @@
+
 import numpy as np
-import vintools as v
+import vinplots
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 
@@ -7,14 +8,15 @@ from matplotlib.gridspec import GridSpec
 def _setup_plot():
 
     """"""
-
-    plot = plt.Figure(figsize=np.array(v.pl.mpl_dimensions()) * [2, 1.2])
-    gs = GridSpec(1, 2)
-    ax = plot.add_subplot(gs[0, 0])
-    spines = v.pl.ax_spines(ax)
-    spines.delete(["top", "right"])
-    spines.set_color("grey")
-    spines.set_position(position_type="outward", amount=20)
+    
+    plot = vinplots.Plot()
+    plot.construct(nplots=2, ncols=2, figsize_width=2, figsize_height=1.2)
+    plot.style(spines_to_delete=["top", "right"], 
+               color="grey", 
+               spines_to_color=['bottom', 'left'], 
+               spines_positioning_amount=5)
+    
+    ax = plot.AxesDict[0][0]
 
     return plot, ax
 
@@ -30,7 +32,7 @@ def _plot_umap(adata, umap_key, plot_by, colors_dict=False):
     
     umap = adata.obsm[umap_key]
     if not colors_dict:
-        c = v.pl.share_seq()["colors"]
+        c = vinplots.color_palettes.SHAREseq
     plot, ax = _setup_plot()
 
     for n, i in enumerate(adata.obs[plot_by].unique()):

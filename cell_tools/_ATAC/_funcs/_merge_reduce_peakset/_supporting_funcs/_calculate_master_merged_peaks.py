@@ -1,9 +1,23 @@
 
-import pandas as pd
+# _calculate_master_merged_peaks.py
+
+__module_name__ = "_calculate_master_merged_peaks.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
+# package imports #
+# --------------- #
+import episcanpy as epi
 import numpy as np
+import pandas as pd
 import pyranges as pr
 
+
+# local imports #
+# ------------- #
 from ._save_peaks_to_csv import _save_peaks_to_csv
+
 
 def _pyranges_bedfile_cluster(chromosomes, starts, ends):
 

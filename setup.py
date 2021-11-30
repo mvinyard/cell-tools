@@ -1,6 +1,16 @@
-from setuptools import setup
-import re
+
+# setup.py
+
+__module_name__ = "setup.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
+# package imports #
+# --------------- #
 import os
+import re
+from setuptools import setup
 import sys
 
 
@@ -26,8 +36,9 @@ setup(
     install_requires=[
         "anndata>=0.7.8",
         "tqdm>=4.62.3",
+        "Cython>=0.29.24",
         "pyranges>=0.0.113",
-	"episcanpy>=0.3.2",
+        "episcanpy>=0.3.2",
     ],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",

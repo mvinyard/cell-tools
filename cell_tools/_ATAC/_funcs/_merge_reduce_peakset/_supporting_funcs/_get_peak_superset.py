@@ -1,7 +1,16 @@
 
-import vintools as v
-import pandas as pd
+# _get_peak_superset.py
+
+__module_name__ = "_get_peak_superset.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
+# package imports #
+# --------------- #
 import numpy as np
+import pandas as pd
+
 
 def _get_peak_superset(DataDict):
 

@@ -1,8 +1,18 @@
 
+# _load_data.py
+
+__module_name__ = "_load_data.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
+# package imports #
+# --------------- #
 import glob
-import scipy.io as scipy_io
 import pandas as pd
+import scipy.io as scipy_io
 from tqdm.notebook import tqdm
+
 
 def _get_sample_name_between(pathlist, super_dir, minor_dir):
 

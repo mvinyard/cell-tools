@@ -1,5 +1,16 @@
+
+# _write_DataDict_mtx_to_h5.py
+
+__module_name__ = "_write_DataDict_mtx_to_h5.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
+# package imports #
+# --------------- #
 import h5py
 import os
+
 
 def _write_matrix_h5(array, h5_filepath, name):
 
