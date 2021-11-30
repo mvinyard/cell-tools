@@ -1,8 +1,16 @@
 
+# _plot_umap.py
+
+__module_name__ = "_plot_umap.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
+# package imports #
+# --------------- #
+import matplotlib.pyplot as plt
 import numpy as np
 import vinplots
-import matplotlib.pyplot as plt
-from matplotlib.gridspec import GridSpec
 
 
 def _setup_plot():
