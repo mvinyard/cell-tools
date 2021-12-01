@@ -1,13 +1,36 @@
 
+# _get_score_df.py
+
+__module_name__ = "_get_score_df.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
+# import packages #
+# --------------- #
 import pandas as pd
-import vintools as v
+
+
+def _make_empty_dict(subdicts=[]):
+    
+    """
+    
+    """
+    
+    Dict = {}
+    
+    for s in subdicts:
+        Dict[s] = {}
+        
+    return Dict
+
 
 def _get_score_dict(adata, group_key):
 
     names = adata.uns[group_key]["names"]
     scores = adata.uns[group_key]["logfoldchanges"]
 
-    ScoreDict = v.ut.EmptyDict(scores.dtype.names)
+    ScoreDict = _make_empty_dict(scores.dtype.names)
     keys = list(ScoreDict.keys())
 
     for i in range(len(keys)):

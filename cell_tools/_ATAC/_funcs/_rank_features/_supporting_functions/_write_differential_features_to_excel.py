@@ -1,6 +1,21 @@
-import vintools as v
+
+# _write_differential_features_to_excel.py
+
+__module_name__ = "_write_differential_features_to_excel.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
+# import packages #
+# --------------- #
 import pandas as pd
 import numpy as np
+
+
+def _df_to_excel(list_df, workbook_path, sheetnames):
+    """
+    Placeholder.
+    """
 
 def _prepare_diffCA_Dict_for_Excel(adata, score_df, groupby):
 
@@ -20,7 +35,7 @@ def _write_differential_features_to_excel(
 
     diffCA_Dict = _prepare_diffCA_Dict_for_Excel(adata, score_df, groupby)
 
-    v.ut.df_to_excel(
+    _df_to_excel(
         list(diffCA_Dict.values()),
         workbook_path="{}.top{}.logfoldchange.differential_features.{}.xlsx".format(
             out_prefix, n_features, groupby

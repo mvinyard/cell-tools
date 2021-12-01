@@ -13,7 +13,7 @@ import os
 
 # local imports #
 # ------------- #
-from ...._utilities._funcs._flexible_multilevel_mkdir import _flexible_multilevel_mkdir
+from ....._utilities._funcs._flexible_multilevel_mkdir import _flexible_multilevel_mkdir
 
 
 def _save_peaks_to_csv(peak_df, out, filename="MergedPeaks.csv"):
