@@ -8,10 +8,10 @@ __email__ = ", ".join(["vinyard@g.harvard.edu",])
 
 # package imports #
 # --------------- #
-import licorice
+# import licorice
 import matplotlib.pyplot as plt
 import numpy as np
-import vinplots
+# import vinplots
 
 
 def _get_base_idx(base_idx, n_cells):

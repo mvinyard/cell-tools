@@ -8,7 +8,7 @@ __email__ = ", ".join(["vinyard@g.harvard.edu",])
 
 # package imports #
 # --------------- #
-from harmony import harmonize
+# from harmony import harmonize
 from sklearn.preprocessing import StandardScaler
 import umap
 

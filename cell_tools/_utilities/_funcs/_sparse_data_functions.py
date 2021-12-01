@@ -4,7 +4,7 @@ import scipy.sparse
 def _sparse_variance(X, tmp, axis=0):
     """Calculate variance across the specified axis of a sparse matrix"""
 
-    mean_gene = self.X.mean(axis=axis).A.squeeze()
+    mean_gene = X.mean(axis=axis).A.squeeze()
     tmp.data **= 2
     return tmp.mean(axis=axis).A.squeeze() - mean_gene ** 2
 
@@ -20,7 +20,7 @@ class _Sparse:
 
     """Useful sparse functions."""
 
-    def __init__(X):
+    def __init__(self, X):
 
         self.X = X
         self.tmp = self.X.copy()
@@ -47,7 +47,7 @@ class _Sparse:
             col_stdev = np.sqrt(_sparse_variance(self.X, self.tmp, axis=0))
         return _sparse_row_wise_multiplication(self.X.T, scala1 / col_stdev).T
 
-    def z_score(slef, gene_mean=False, gene_stdev=False):
+    def z_score(self, gene_mean=False, gene_stdev=False):
 
         """"""
 
