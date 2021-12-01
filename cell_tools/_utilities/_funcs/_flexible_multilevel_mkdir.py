@@ -8,7 +8,7 @@ __email__ = ", ".join(["vinyard@g.harvard.edu",])
 # import packages #
 # --------------- #
 import os
-# import licorice
+import licorice
 
 
 def _flexible_mkdir(path, verbose):
