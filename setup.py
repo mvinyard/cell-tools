@@ -40,6 +40,7 @@ setup(
         "pyranges>=0.0.113",
         "episcanpy>=0.3.2",
 	"licorice>=0.0.2",
+	"pytrellis>=0.0.1",
     ],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
