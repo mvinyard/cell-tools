@@ -1,13 +1,13 @@
 
 import pandas as pd
-import vintools as v
+import nuts_and_bolts
 
 def _get_score_dict(adata, group_key):
 
     names = adata.uns[group_key]["names"]
     scores = adata.uns[group_key]["logfoldchanges"]
 
-    ScoreDict = v.ut.EmptyDict(scores.dtype.names)
+    ScoreDict = nuts_and_bolts.create_empty_dict(scores.dtype.names)
     keys = list(ScoreDict.keys())
 
     for i in range(len(keys)):

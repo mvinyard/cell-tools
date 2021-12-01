@@ -9,16 +9,12 @@ __email__ = ", ".join(["vinyard@g.harvard.edu",])
 # package imports #
 # --------------- #
 import os
-
-
-# local imports #
-# ------------- #
-from ...._utilities._funcs._flexible_multilevel_mkdir import _flexible_multilevel_mkdir
+import nuts_and_bolts
 
 
 def _save_peaks_to_csv(peak_df, out, filename="MergedPeaks.csv"):
     
-    v.ut.mkdir_flex(out)
+    nuts_and_bolts.mkdir_flex(out)
     filepath = os.path.join(out, filename)
     
     peak_df.to_csv(filepath)
