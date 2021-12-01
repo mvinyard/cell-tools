@@ -13,11 +13,6 @@ import pandas as pd
 import os
 
 
-# local imports #
-# ------------- #
-from ..._utilities._funcs._flexible_multilevel_mkdir import _flexible_multilevel_mkdir
-
-
 def _concatenate_and_save_adata(
     DataDict,
     merged_adata_outpath=False,
