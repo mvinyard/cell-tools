@@ -9,9 +9,7 @@ __email__ = ", ".join(["vinyard@g.harvard.edu",])
 # import packages #
 # --------------- #
 import pandas as pd
-<<<<<<< HEAD
-import nuts_and_bolts
-=======
+import pytrellis
 
 
 def _make_empty_dict(subdicts=[]):
@@ -27,18 +25,13 @@ def _make_empty_dict(subdicts=[]):
         
     return Dict
 
->>>>>>> 80846f317faa84ef61ddd9b8f4f7568417716a71
-
 def _get_score_dict(adata, group_key):
 
     names = adata.uns[group_key]["names"]
     scores = adata.uns[group_key]["logfoldchanges"]
 
-<<<<<<< HEAD
-    ScoreDict = nuts_and_bolts.create_empty_dict(scores.dtype.names)
-=======
+    ScoreDict = pytrellis.create_empty_dict(scores.dtype.names)
     ScoreDict = _make_empty_dict(scores.dtype.names)
->>>>>>> 80846f317faa84ef61ddd9b8f4f7568417716a71
     keys = list(ScoreDict.keys())
 
     for i in range(len(keys)):

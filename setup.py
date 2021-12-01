@@ -35,12 +35,13 @@ setup(
     ],
     install_requires=[
         "anndata>=0.7.8",
-        "tqdm>=4.62.3",
-        "Cython>=0.29.24",
-        "pyranges>=0.0.113",
-        "episcanpy>=0.3.2",
+        "cython>=0.29.24",
+	"episcanpy>=0.3.2",
 	"licorice>=0.0.2",
+	"nb-black>=1.0.7",
+        "pyranges>=0.0.113",
 	"pytrellis>=0.0.1",
+	"tqdm>=4.62.3",
     ],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
