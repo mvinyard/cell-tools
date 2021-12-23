@@ -46,7 +46,7 @@ exclude_patterns = []
 
 html_show_sourcelink = True
 html_theme = 'pydata_sphinx_theme'
-
+html_favicon = '/imgs/cell_icon.svg'
 
 html_context = dict(
     github_user="mvinyard",  # Username
@@ -57,7 +57,7 @@ html_context = dict(
 
 # Set link name generated in the top bar.
 html_title = "cell-tools"
-html_logo = "../imgs/logo.png"
+html_logo = "../imgs/cell-tools.logo.svg"
 
 html_theme_options = {
     "github_url": "https://github.com/mvinyard/cell-tools",
