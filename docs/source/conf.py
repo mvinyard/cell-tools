@@ -44,10 +44,26 @@ exclude_patterns = []
 
 # -- Options for HTML output -------------------------------------------------
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
+html_show_sourcelink = True
 html_theme = 'pydata_sphinx_theme'
+
+
+html_context = dict(
+    github_user="mvinyard",  # Username
+    github_repo="cell-tools",  # Repo name
+    github_version="master",  # Version
+    doc_path="docs/",  # Path in the checkout to the docs root
+)
+
+# Set link name generated in the top bar.
+html_title = "cell-tools"
+html_logo = "../imgs/logo.png"
+
+html_theme_options = {
+    "github_url": "https://github.com/mvinyard/cell-tools",
+    "twitter_url": "https://twitter.com/vinyard_m",
+}
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
