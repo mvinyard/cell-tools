@@ -1,4 +1,4 @@
-# ![cell-tools_logo](docs/imgs/cell-tools.logo1.svg)
+# ![cell-tools_logo](docs/imgs/cell-tools.logo.svg)
 
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/cell-tools.svg)](https://pypi.python.org/pypi/cell-tools/)
 [![PyPI version](https://badge.fury.io/py/cell-tools.svg)](https://badge.fury.io/py/cell-tools)
