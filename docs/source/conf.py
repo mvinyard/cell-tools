@@ -46,7 +46,7 @@ exclude_patterns = []
 
 html_show_sourcelink = True
 html_theme = 'pydata_sphinx_theme'
-html_favicon = '/imgs/cell_icon.svg'
+html_favicon = '../imgs/cell_icon.svg'
 
 html_context = dict(
     github_user="mvinyard",  # Username
