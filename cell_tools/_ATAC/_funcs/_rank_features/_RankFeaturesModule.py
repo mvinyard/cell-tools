@@ -12,7 +12,7 @@ import scanpy as sc, episcanpy as epi
 from ._supporting_functions._get_score_df import _get_score_df
 from ._supporting_functions._run_episcanpy_group_rank_plots import _run_episcanpy_group_rank_plots
 from ._supporting_functions._write_differential_features_to_excel import _write_differential_features_to_excel
-
+from ._supporting_functions._calculate_FeatureSumDict import _calculate_FeatureSumDict
 
 class _RankFeatures:
     def __init__(
@@ -47,7 +47,12 @@ class _RankFeatures:
             self.out_prefix,
             self.n_plot_features,
         )
-
+    
+    def calculate_feature_sums(self):
+        
+        """"""
+        self.feature_sum_dict, self.rank_dict = _calculate_FeatureSumDict(self._adata, self.group_key, self.groupby)
+    
     def get_score_df(self):
 
         self.score_df = _get_score_df(self._adata, self.group_key)
