@@ -1,6 +1,16 @@
-from setuptools import setup
-import re
+
+# setup.py
+
+__module_name__ = "setup.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
+# package imports #
+# --------------- #
 import os
+import re
+from setuptools import setup
 import sys
 
 
@@ -24,18 +34,14 @@ setup(
         "cell_tools._utilities",
     ],
     install_requires=[
-        "matplotlib>=3.4",
-        "anndata>=0.7.1",
-        "scanpy>=1.4.3",
-        "scprep>=1.1.0",
-        "torch>=1.1.0",
-        "numpy>=1.19.2",
-        "pandas>=1.1.2",
-        "pysam>=0.16.0",
-        "torchdiffeq>=0.2.1",
-        "harmony-pytorch>=0.1.6",
-        "psutil>=5.8.0",
-        "biopython>=1.79",
+        "anndata>=0.7.8",
+        "cython>=0.29.24",
+	"episcanpy>=0.3.2",
+	"licorice>=0.0.2",
+	"nb-black>=1.0.7",
+        "pyranges>=0.0.113",
+	"pytrellis>=0.0.1",
+	"tqdm>=4.62.3",
     ],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",

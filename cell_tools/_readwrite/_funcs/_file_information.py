@@ -1,5 +1,6 @@
 
 # _isolate_filename.py
+
 __module_name__ = "_isolate_filename.py"
 __author__ = ", ".join(["Michael E. Vinyard"])
 __email__ = ", ".join(["vinyard@g.harvard.edu",])

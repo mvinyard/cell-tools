@@ -1,12 +1,13 @@
 
 # _merge_reduce_peakset_module.py
+
 __module_name__ = "_merge_reduce_peakset_module.py"
 __author__ = ", ".join(["Michael E. Vinyard"])
 __email__ = ", ".join(["vinyard@g.harvard.edu",])
 
+
 # local imports #
 # ------------- #
-
 from ._supporting_funcs._load_data import _load_data
 from ._supporting_funcs._get_peak_superset import _get_peak_superset
 from ._supporting_funcs._unify_peak_matrices import _unify_peak_matrices

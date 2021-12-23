@@ -1,3 +1,11 @@
+
+# _strip_10x_barcode_sequence.py
+
+__module_name__ = "_strip_10x_barcode_sequence.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
 def _strip_10x_barcode_sequence(df, column=False):
 
     """

@@ -1,5 +1,13 @@
 
-import vintools as v
+# _concatenate_and_save_adata.py
+
+__module_name__ = "_concatenate_and_save_adata.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
+# package imports #
+# --------------- #
 import anndata as a
 import pandas as pd
 import os
@@ -17,7 +25,7 @@ def _concatenate_and_save_adata(
     Load from merged features. Assumes saved structure.
     """
 
-    v.ut.mkdir_flex(individual_adata_outpath)
+    _flexible_multilevel_mkdir(individual_adata_outpath)
 
     for name, adata in DataDict.items():
         adata.obs = adata.obs.reset_index(drop=True)

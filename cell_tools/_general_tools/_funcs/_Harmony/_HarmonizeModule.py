@@ -1,8 +1,15 @@
 
+# _HarmonizeModule.py
+
+__module_name__ = "_HarmonizeModule.py"
+__author__ = ", ".join(["Michael E. Vinyard"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
+
+
 # package imports #
 # --------------- #
+# from harmony import harmonize
 from sklearn.preprocessing import StandardScaler
-from harmony import harmonize
 import umap
 
 # local imports #
