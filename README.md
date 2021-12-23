@@ -15,13 +15,13 @@ Funtion development will likely focus on scATAC-seq given that there are so many
 ### Installation
 **Install with `pip`**:
 ```BASH
-pip install perturb_tools
+pip install cell-tools
 ```
 
 **Install the development package**:
 ```BASH
 # (1) clone this repository
-git clone https://github.com/mvinyard/perturb-tools.git
+git clone https://github.com/mvinyard/cell-tools.git
 
 # (2) install the local project in editable mode
 cd ./perturb-tools; pip install -e .
