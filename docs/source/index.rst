@@ -30,3 +30,6 @@ There is no paper to cite, however if you find this package useful for your own 
    :maxdepth: 3
    :titlesonly:
    :hidden:
+
+   installation
+   API/index
