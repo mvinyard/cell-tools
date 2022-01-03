@@ -61,7 +61,7 @@ def _h5_data_object_to_pandas_DataFrame(data_object, level_1_keys, level_2_keys)
 
 def _h5_data_object_to_AnnData(matrix):
     
-    """"""
+    """Data is sparse matrix of type '<class 'numpy.float64'> with n stored elements in Compressed Sparse Row format"""
         
     data = matrix['data']
     indices = matrix['indices']
@@ -110,7 +110,34 @@ class _h5_to_AnnData:
     
 def _read_h5(path, obs_keys = [["barcodes"], False], var_keys = [['features'], ['feature_type', 'genome', 'id', 'name']], matrix_key="matrix"):
     
-    """"""
+    """
+    For the general use-case of reading an h5 file. 
+    
+    Parameters:
+    -----------
+    path
+    
+    obs_keys
+        default: [["barcodes"], False]
+    
+    var_keys
+        default: [['features'], ['feature_type', 'genome', 'id', 'name']]
+
+    matrix_key
+        default: "matrix"
+    
+    
+    Returns:
+    --------
+    adata
+    
+    
+    Notes:
+    ------
+    (1) Not necessarily compatible with all h5 files nor all standard single-cell files without adjusting keys. 
+    
+    (2) Assumes a single key.
+    """
     
     h5 = _h5_to_AnnData(path)
     h5.load_matrix(matrix_key)
