@@ -6,3 +6,4 @@ __author__ = ", ".join(["Michael E. Vinyard"])
 __email__ = ", ".join(["vinyard@g.harvard.edu",])
 
 from ._funcs._Harmony._HarmonizeModule import _Harmonize as Harmonize
+from ._funcs._pca import _pca_anndata as PCA

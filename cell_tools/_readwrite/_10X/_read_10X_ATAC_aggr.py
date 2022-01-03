@@ -63,7 +63,38 @@ def _format_10X_atac_adata_var(adata):
     tmp_var = tmp_var.rename({'id':'coordinates'}, axis=1)
     tmp_var.index = tmp_var.index.astype(str)
     
-    return adata.var
+    return tmp_var
+
+
+def _format_peak_coordinates(adata):
+    
+    """"""
+    
+    var_df = adata.var.copy()
+    
+    tmp_var_df = adata.var['coordinates'].str.split(':', expand=True)
+    var_df['Chromosome'] = tmp_var_df[0]
+    var_df[['Start', 'End']] = tmp_var_df[1].str.split('-', expand=True)
+    var_df[['Start', 'End']] = var_df[['Start', 'End']].astype(int)
+    
+    return var_df
+
+def _to_categorical(df):
+    
+    for column in df.columns:
+        df[column] = pd.Categorical(df[column])
+    return df
+
+
+def _write_h5ad(adata, aggr_path, silent):
+    
+    adata.var = _to_categorical(adata.var)
+    adata.obs = _to_categorical(adata.obs)
+    
+    h5ad_path = os.path.join(aggr_path, "adata.raw.h5ad")
+    if not silent:
+        print("\nWriting to: {}..\n".format(h5ad_path))
+    adata.write_h5ad(h5ad_path)
 
 def _read_10X_ATAC_aggr(aggr_path, silent=False):
     
@@ -94,6 +125,8 @@ def _read_10X_ATAC_aggr(aggr_path, silent=False):
     adata.uns['lib_ids'] = _load_library_ids(aggr_path)
     adata.obs = _annotate_library(adata)
     adata.var = _format_10X_atac_adata_var(adata)
+    adata.var = _format_peak_coordinates(adata)
+    _write_h5ad(adata, aggr_path, silent)
     
     if not silent:
         print(adata)

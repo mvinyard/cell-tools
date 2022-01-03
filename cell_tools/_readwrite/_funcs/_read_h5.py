@@ -76,14 +76,14 @@ class _h5_to_AnnData:
     def __init__(self, path, silent=True):
         
         """"""
-        self.h5_file = h5py.File(h5_path, mode="r")
+        self.h5_file = h5py.File(path, mode="r")
         self.silent = silent
     
     def load_matrix(self, key="matrix"):
         
         """"""
         
-        self.matrix = _access_hdf5_file_keys(h5_file, key, self.silent)
+        self.matrix = _access_hdf5_file_keys(self.h5_file, key, self.silent)
         self.adata = _h5_data_object_to_AnnData(self.matrix)
     
     def load_var(self, level_1_keys=["features"], level_2_keys=['feature_type', 'genome', 'id', 'name']):

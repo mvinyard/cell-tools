@@ -8,3 +8,6 @@ __email__ = ", ".join(["vinyard@g.harvard.edu",])
 from ._funcs._strip_10x_barcode_sequence import _strip_10x_barcode_sequence as strip_10x_barcode
 from ._funcs._running_quantile import _running_quantile as running_quantile
 from ._funcs._sparse_data_functions import _Sparse as sparse
+
+# from ._funcs._scale import _scale as scale
+from ._funcs._scale import _scale_anndata as scale
