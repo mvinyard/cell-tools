@@ -112,7 +112,7 @@ def _read_h5(path, obs_keys = [["barcodes"], False], var_keys = [['features'], [
     
     """"""
     
-    h5 = _h5_to_AnnData(h5_path)
+    h5 = _h5_to_AnnData(path)
     h5.load_matrix(matrix_key)
     
     h5.load_obs(level_1_keys=obs_keys[0],
