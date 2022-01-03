@@ -98,17 +98,24 @@ class _h5_to_AnnData:
         
         self.obs_df = _h5_data_object_to_pandas_DataFrame(self.matrix, level_1_keys, level_2_keys)
         
-    def assemble(self, return_adata=True):
+    def assemble(self, return_adata=True, silent=False):
         
         """"""
         
         self.adata.obs = self.obs_df
         self.adata.var = self.var_df
-        print(self.adata)
+        
+        if not silent:
+            print(self.adata)
         
         return self.adata
     
-def _read_h5(path, obs_keys = [["barcodes"], False], var_keys = [['features'], ['feature_type', 'genome', 'id', 'name']], matrix_key="matrix"):
+def _read_h5(path, 
+             return_adata=True, 
+             silent=False, 
+             obs_keys = [["barcodes"], False], 
+             var_keys = [['features'], ['feature_type', 'genome', 'id', 'name']], 
+             matrix_key="matrix"):
     
     """
     For the general use-case of reading an h5 file. 
@@ -116,6 +123,10 @@ def _read_h5(path, obs_keys = [["barcodes"], False], var_keys = [['features'], [
     Parameters:
     -----------
     path
+    
+    return_adata
+    
+    silent
     
     obs_keys
         default: [["barcodes"], False]
@@ -150,4 +161,4 @@ def _read_h5(path, obs_keys = [["barcodes"], False], var_keys = [['features'], [
                 level_2_keys=var_keys[1]
                )
     
-    return h5.assemble()
+    return h5.assemble(return_adata, silent)
