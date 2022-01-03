@@ -25,7 +25,7 @@ def _split_aggr_library_cell_barcodes(adata, barcodes="barcodes"):
     return adata.obs[barcodes].str.split("-", expand=True)[1]
 
 
-def _read_10x_aggr(path, write_h5ad="aggr.10x.adata.h5ad", silent=False):
+def _read_10x_aggr(path, write_h5ad="aggr.10x.adata.h5ad", add_raw_layer=True, silent=False):
 
     """
     Creates AnnData object from h5 file. Annotates with library id's.
@@ -47,6 +47,9 @@ def _read_10x_aggr(path, write_h5ad="aggr.10x.adata.h5ad", silent=False):
     tmp_obs.index = tmp_obs.index.astype(str)
     adata.obs = tmp_obs
     del tmp_obs
+    
+    if add_raw_layer:
+        adata.raw = adata
         
     if write_h5ad:
         _write_adata_with_warning_reduction(adata, write_h5ad)
