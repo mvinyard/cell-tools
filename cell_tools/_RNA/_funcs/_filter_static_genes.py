@@ -8,11 +8,13 @@ __email__ = ", ".join(["vinyard@g.harvard.edu",])
 
 # package imports #
 # --------------- #
-# import licorice
+import licorice
+import scipy.optimize
 import matplotlib.pyplot as plt
 import numpy as np
-# import vinplots
+import vinplots
 
+from ._calculate_running_quantile import _calculate_running_quantile
 
 def _get_base_idx(base_idx, n_cells):
 
@@ -95,6 +97,7 @@ def _make_plot():
 
 
 def _plot_var_score(
+    filtered_var_gene,
     mu_gene,
     idx,
     a,
@@ -142,6 +145,8 @@ def _annotate_adata_highvar_genes(adata, highly_variable_genes_idx):
     hv_gene_annotation = np.zeros(adata.X.shape[1])
     hv_gene_annotation[highly_variable_genes_idx] = True
     adata.var["highly_variable"] = hv_gene_annotation.astype(bool)
+    
+    adata.uns['highly_variable_genes_idx'] = highly_variable_genes_idx        
 
 def _filter_static_genes(
     adata,
@@ -185,13 +190,13 @@ def _filter_static_genes(
     )
 
     if plot:
-        _plot_var_score(mu_gene, idx, a, b, sample_name)
+        _plot_var_score(filtered_var_gene, mu_gene, idx, a, b, sample_name)
 
-    variable_genes = gene_idx[idx]
-    n_var_genes = licorice.font_format(str(len(variable_genes)), ["BOLD"])
+    highly_variable_genes_idx = gene_idx[idx]
+    n_var_genes = licorice.font_format(str(len(highly_variable_genes_idx)), ["BOLD"])
     print("{} variable genes identified".format(n_var_genes))
     
     _annotate_adata_highvar_genes(adata, highly_variable_genes_idx)
-    
+           
     if return_hv_genes:
-        return variable_genes
+        return highly_variable_genes_idx
