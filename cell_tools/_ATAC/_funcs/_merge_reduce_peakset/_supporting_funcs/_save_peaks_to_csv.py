@@ -9,12 +9,12 @@ __email__ = ", ".join(["vinyard@g.harvard.edu",])
 # package imports #
 # --------------- #
 import os
-import pytrellis
+import pyrequisites as pyrex
 
 
 def _save_peaks_to_csv(peak_df, out, filename="MergedPeaks.csv"):
     
-    pytrellis.mkdir_flex(out)
+    pyrex.mkdir_flex(out)
     filepath = os.path.join(out, filename)
     
     peak_df.to_csv(filepath)

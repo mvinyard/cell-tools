@@ -10,3 +10,5 @@ from ._funcs._filter_static_genes import _filter_static_genes as filter_static_g
 from ._funcs._find_marker_genes import _find_marker_genes as id_marker_genes
 
 from ._funcs._remove_correlated_genes_adata import _remove_correlated_genes_adata as remove_correlated_genes
+
+from ._funcs._filter_cells_by_gene_set import _GeneSetFiltering as gene_set_filtering

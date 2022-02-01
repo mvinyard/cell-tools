@@ -20,15 +20,16 @@ def _info_message(cell_mask, gene_idx):
     print("{} cells in group".format(len(cell_mask)))
     print("Considering {} genes".format(len(gene_idx)))
     
-def _prepare_adata(adata, column="index", cell_list=[]):
+def _prepare_adata(adata, column, cell_list):
     
-    df_obs = adata.obs
-    df_obs = df_obs.reset_index()
+    df_obs = adata.obs.reset_index()
     
-    cell_idx = df_obs.loc[df_obs[column].isin(cell_list)].index.astype(int)
-    
-    return cell_idx
-    
+    if cell_list:
+        return df_obs.loc[df_obs[column].isin(cell_list)].index.astype(int)
+        
+    else:
+        return df_obs.index.astype(int)
+            
 def _rank_enriched_genes_array(X, 
                                gene_list, 
                                cell_mask, 
@@ -57,18 +58,23 @@ def _rank_enriched_genes_array(X,
 
 
 def _rank_enriched_genes_adata(adata, 
-                               genes, 
-                               cells, 
+                               gene_list=False, 
+                               cell_list=False, 
                                title="gene_enrichment_scores", 
                                return_gene_scores=False, 
                                min_counts=3, 
                                min_cells=3, 
-                               cell_barcode_column="index", 
+                               cell_barcode_column="index",
+                               gene_id_column="gene_name",
                                verbose=True):
     
-    """"""    
+    """"""
     
-    cell_mask_idx = _prepare_adata(adata, column="index", cell_list=cells)
+    if not genes:
+        genes = adata.var['gene_name'].values.tolist()
+    
+    cell_mask_idx = _prepare_adata(adata, column=cell_barcode_column, cell_list=cells)
+        
     genes, scores = _rank_enriched_genes_array(adata.X, 
                                                gene_list=adata.var_names,
                                                cell_mask=cell_mask_idx,

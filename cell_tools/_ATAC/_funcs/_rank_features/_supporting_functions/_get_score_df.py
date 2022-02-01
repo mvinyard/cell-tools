@@ -9,7 +9,7 @@ __email__ = ", ".join(["vinyard@g.harvard.edu",])
 # import packages #
 # --------------- #
 import pandas as pd
-import pytrellis
+import pyrequisites as pyrex
 
 
 def _make_empty_dict(subdicts=[]):
