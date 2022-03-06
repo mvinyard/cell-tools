@@ -26,12 +26,8 @@ setup(
     description="cell_tools - Analysis Tools for Single-Cell Data",
     packages=[
         "cell_tools",
-        "cell_tools._ATAC",
         "cell_tools._RNA",
-        "cell_tools._datasets",
-        "cell_tools._multiome",
-        "cell_tools._readwrite",
-        "cell_tools._utilities",
+        "cell_tools._RNA._funcs",
     ],
     install_requires=[
         "anndata>=0.7.8",
@@ -41,6 +37,7 @@ setup(
         "pyranges>=0.0.113",
 	"licorice>=0.0.2",
 	"pydk>=0.0.4",
+	"vinplots>=0.0.43",
 	"tqdm>=4.62.3",
     ],
     classifiers=[
