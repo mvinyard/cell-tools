@@ -6,6 +6,8 @@
 
 **cell-tools** is a **Single-Cell Data Analysis Toolkit** with the following areas of focus and development:
 
+**Disclaimer**: There isn't really much of a reason for someone to use this when they would likely be more comfortable using one of the great, well-maintained tools like ***Scanpy***, ***Seurat***, or ***scvi-tools*** (or any of the implemented tools, directly). This is mostly a package for personal use, learning, and collaboration. My other goal for this package is to help me version-control and keep track of code that I use frequently. 
+
 1. scRNA-seq data
 2. scATAC-seq data
 3. Multiomic (mostly scRNA-seq + scATAC-seq) data
