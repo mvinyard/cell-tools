@@ -13,12 +13,13 @@
 Funtion development will likely focus on scATAC-seq given that there are so many python-implemented tools developed already for scRNA-seq. However, wrappers that enable batch-mode QC and pipeline-oriented solutions have been designed and will eventually be added.
 
 ### Installation
-<!-- **Install with `pip`**:
+**Install with `pip`**:
 ```BASH
 pip install cell-tools
-``` -->
+# note: limited functionality! for full functionality, install the development (main branch) package! 
+```
 
-**Install the development package**:
+**Install the development package (main branch)**:
 ```BASH
 # (1) clone this repository
 git clone https://github.com/mvinyard/cell-tools.git
