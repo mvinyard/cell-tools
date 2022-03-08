@@ -35,7 +35,44 @@ def _calculate_p_values(gene_mask, X1, X2):
 
 def _calculate_differential_gene_expression(adata, mask1, mask2, min_fraction_expressed=0.05, pseudocount=1):
     
-    """"""
+    """
+    Given adata and two cell masks, calculate differential gene expression between cells in the two masks. 
+
+    Parameters:
+    -----------
+    adata
+        AnnData object
+        type: AnnData.adata
+
+    mask1
+        Group of cells
+        type: list
+
+    mask2
+        Group of cells
+        type: list
+
+    min_fraction_expressed
+        default: 0.05
+        type: float
+
+    pseudocount
+        default: 1
+        type: int
+
+
+    Returns:
+    --------
+    df
+        columns: [['gene', 'pv', 'm1', 'm2', 'ratio']]
+
+    Example(s):
+    -----------
+    [default]: dge_df = cell.RNA.DE(adata, mask1, mask2)
+
+    Notes:
+    ------
+    """
     
     gene_mask = _get_gene_mask(adata.X, mask1, mask2, min_fraction_expressed)
     
